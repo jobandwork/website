@@ -253,9 +253,15 @@
                   <h6 class="w3-opacity">
                     Tus publicaciones serán visibles a cualquier empleador
                   </h6>
-                  <p contenteditable="true" class="w3-border w3-padding">
-                    ¿En que estas trabajando?
-                  </p>
+                  <style>
+                    p:empty:not(:focus)::before {
+                      content: attr(data-placeholder);
+                    }
+                  </style>
+                  <p
+                    data-placeholder="¿En que estas trabajando?"
+                    contenteditable="true"
+                    class="w3-border w3-padding"></p>
                   <button type="button" class="w3-button w3-theme">
                     <i class="fa fa-pencil"></i> Postear
                   </button>
